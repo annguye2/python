@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <title>
+        HOME
+    </title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        <h1>
+            Working
+        </h1>
+        <p>This site is working</p>
+        <a href="{% url 'contact'%}"> Contact Information</a>
+        
+
+        <h1>HOME PAGE </h1>
+        <p>Get Titanic Prediction hrere </p>
+
+
+
+        <a href="{% url 'result'%}"> Form Information</a>
+        
+        <form action="{%url  'result' %}">
+            {%csrf_token%}
+            <p>Pclass</p>
+            <input type="text" name="pclass">
+            <p>Sex</p>
+            <input type="text" name="sex">
+            <p>Age</p>
+            <input type="text" name="age">
+            <p>Sibsp</p>
+            <input type="text" name="sibsp">
+            <p>Parch</p>
+            <input type="text" name="parch">
+            <p>Fare</p>
+            <input type="text" name="fare">
+            <p>Embarked</p>
+            <input type="text" name="embarked">
+            <p>title</p>
+            <input type="text" name="title">
+            <br>
+            <input type="submit" value="Click Me">
+        </form>
+
+<br>
+
+
+       
+    </body>
+</html>
